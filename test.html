@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+        <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+        <link href="/main.css" rel="stylesheet">
+
+        <title>G3T 0UT!1=!</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        
+    </head>
+
+    <body>
+    
+        <button class="btn" onclick="closeWebsite()"    style="background-color: transparent; color: white;">GET OUT</button>
+        <p id="flickering-text"class="text" style="color: rgb(15, 15, 15); visibility: hidden;">i $AlD G3T 0UT!?=!</p>
+        <script>
+            function closeWebsite() {
+              window.close();
+            }
+        </script>
+        
+        <script>
+            function flickerText() {
+
+
+                
+              const textElement = document.getElementById('flickering-text');
+        
+              setInterval(() => {
+                const randomDelay = Math.random() * 150 + 1; // Random delay between 0 and 1000 milliseconds
+                const isHidden = (textElement.style.visibility === 'hidden');
+        
+                textElement.style.visibility = isHidden ? 'visible' : 'hidden';
+        
+                setTimeout(() => {
+                  flickerText();
+                }, randomDelay);
+              }, 500);
+            }
+        
+
+            setTimeout(() => {
+                     flickerText();
+                }, 5000);
+
+          </script>
+
+    </body>
+</html>
